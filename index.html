@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Firebase SDK (antigua configuración) -->
+  <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-database.js"></script>
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+
+    h4 {
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .sensor-card {
+      height: 150px;
+      width: 90%;
+      max-width: 350px;
+      border-radius: 20px;
+      padding: 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 7px 30px 2px rgba(0, 0, 0, 0.18);
+    }
+
+    .temperatura {
+      background-color: #f45b5b;
+    }
+
+    .humedad {
+      background-color: #3b82f6;
+    }
+
+    .presion {
+      background-color: #22c55e;
+    }
+  </style>
+  <title>Weather Station</title>
+</head>
+
+<body>
+  <div class="container">
+    <h4>Weather Station</h4>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 mb-3">
+        <div class="sensor-card temperatura">
+          <h3>Temperatura</h3>
+          <h3 id="TemperaturaId">-- °C</h3>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 mb-3">
+        <div class="sensor-card humedad">
+          <h3>Humedad</h3>
+          <h3 id="HumedadId">-- %</h3>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="sensor-card presion">
+          <h3>Presión</h3>
+          <h3 id="PresionId">-- mmHG</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Archivo JS -->
+  <script src="js/HiFirebase.js"></script>
+</body>
+
+</html>
